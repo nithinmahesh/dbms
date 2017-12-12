@@ -1,0 +1,13 @@
+#
+create user1 user 400
+login user1 user
+reservations
+quit
+*
+#
+#
+Created user user1
+Logged in as user1
+No reservations found
+Goodbye
+*

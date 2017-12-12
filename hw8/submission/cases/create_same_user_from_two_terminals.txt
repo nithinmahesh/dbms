@@ -1,0 +1,24 @@
+#
+# create a single user
+create user1 user1 100
+quit
+*
+#
+Created user user1
+Goodbye
+|
+Failed to create user
+Goodbye
+*
+# try same operation from different terminal
+# create a single user
+create user1 user1 100
+quit
+*
+#
+Failed to create user
+Goodbye
+|
+Created user user1
+Goodbye
+*

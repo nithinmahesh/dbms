@@ -1,0 +1,11 @@
+USE hw5;
+WITH k as (
+	SELECT country_code, (SELECT g.y.mountain,int(g.y.height) as height FROM g ORDER BY height desc) as mountains 
+	FROM (
+		SELECT m.name as mountain, int(m.height) as height, c as country_code 
+		FROM world x, x.mondial.mountain m UNNEST split(m.`-country`, ' ') c
+	) as T 
+	GROUP BY country_code GROUP AS g(T as y)
+)
+SELECT k.country_code, b.name as country_name, k.mountains FROM world a, a.mondial.country b LEFT OUTER JOIN k on b.`-car_code`=k.country_code
+ORDER BY array_count(mountains) desc;

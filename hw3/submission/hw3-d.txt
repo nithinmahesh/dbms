@@ -1,0 +1,4 @@
+The DBMS that we use in this assignment is running somewhere in one of Microsoft's data centers. 
+Comment on your experience using this DBMS cloud service. What do you think about the idea of offering a DBMS as a service in a public cloud?
+
+The DB management is simplified in using DB-as-Service as I did not have to worry out about where the data and log files were laid out. Nor did I have to worry about managing resources for the engine in my machine. It simplifies the work of the DBA as it automatically manages backup, recovery, high availability with some guaranteed performance. But it has its own limitations in the fact that it does not give me transparency into the the physical layout of the data which SQL Server on prem gives. Overall, I feel that DBaaS is a great step ahead in simplifying the engineer's life but still has more scope to improve.

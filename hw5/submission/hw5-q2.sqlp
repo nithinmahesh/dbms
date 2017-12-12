@@ -1,0 +1,7 @@
+USE hw5;
+SELECT y.name as country, y.population as population, count(u.`#text`) as num_religions
+FROM world x, x.mondial.country y,
+CASE  WHEN is_array(y.religions) THEN y.religions
+                  ELSE [y.religions] END u
+GROUP BY y.name, y.population
+ORDER BY num_religions desc;

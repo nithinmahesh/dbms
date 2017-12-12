@@ -1,0 +1,14 @@
+# user 1
+create user1 user1 100000
+login user1 user1
+search "Seattle WA" "Seattle WA" 1 1 1
+quit
+*
+#
+# expected printouts for user 1
+#
+Created user user1
+Logged in as user1
+No flights match your selection
+Goodbye
+*

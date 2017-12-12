@@ -1,0 +1,23 @@
+1. Describe briefly what "normal form" means as presented in the paper. What are the advantages of this normal form?
+The normal form is a relation in which all its domains are simple. This relation in its normal form can be represented in storage by a 2D array.
+The author clearly explains this with his example for Job and Salary History where he extracts out non-simple domains into separate relations through the normalization procedure.
+So the relation 
+	employee (man#, name, birthdate, jobhistory, children)
+	jobhistory (jobdate, title, salaryhistory)
+	salaryhistory (salarydate, salary)
+	children (childname, birthyear)
+after normalization becomes
+	employee’ (man#, name, birthdate)
+	jobhistory’ (man#, jobdate, title)
+	salaryhistory’ (man#, jobdate, salarydate, salary)
+	children’ (man#, childname, birthyear)
+So now each of the relations have all domains which are simple and hence can be represented as a 2D array in storage.
+The normal form is not only an advantage for storage purposes but also for communication of bulk data between systems which use widely different representations of the data. 
+The communication form would be a suitably compressed version of the array representation and would have the following advantages:
+	(1) It would be devoid of pointers (address-valued or displacement-valued).
+	(2) It would avoid all dependence on hash addressing schemes.
+	(3) It would contain no indices or ordering lists.
+
+2. What is "composition" and why is it important for the relational operations presented in the paper? What would happen if the relational operators don't "compose"?
+I have interpreted "composition" as "functional composition": why is it (or is it not) important that all relational operators take in and return relations? 
+It is important for the operations to take in relations and return relations because being composable is what makes being able to perform these operations on top of each other over and over multiple times. If these operations did not return a relation, then at that point after performing a relation operation one would not be able to use the result effectively for further data manipulations. Being composable increases the usability of these relations multi-fold.

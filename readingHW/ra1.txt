@@ -1,0 +1,6 @@
+1. Why did CODASYL not provide physical data independence?
+The CODASYL proposal suggested that the records in each entry point be hashed on the key in the record. This meant that it is not possible to change the key for a specific record type from attribute A to attribute B as this would break the logic to get to the initial entry point for a certain key for that record. Hence, such design concepts in CODASYL made it not provide physical data independence.
+
+2. What led to Ted Codd designing the relational data model? What were the issues with previous data models at the time?
+Ted Codd's main motivation was the fact that IMS programmers were spending large amounts of time doing maintenance on IMS applications, when logical or physical changes occurred. So he wanted to provide better data independence to make their lives easier.
+The previous data models were not able to provide logical and physical data independence. Also they were not flexible enough to represent almost anything like the Bride, Groom and Minister example.

@@ -1,0 +1,9 @@
+#
+# create a single user with negative balance
+create user1 user1 -100
+quit
+*
+#
+Failed to create user
+Goodbye
+*

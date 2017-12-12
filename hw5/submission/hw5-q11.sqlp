@@ -1,0 +1,19 @@
+USE hw5index;
+WITH C as (
+	SELECT A.country_name, A.mountain, B.sea FROM (
+		SELECT m.name as mountain, c.name as country_name
+		FROM country c, mountain m
+		WHERE c.`-car_code` IN split(m.`-country`, ' ')	
+	) A,
+	(
+		SELECT s.name as sea, c.name as country_name
+		FROM country c, sea s
+		WHERE c.`-car_code` IN split(s.`-country`, ' ')
+	) B
+	WHERE A.country_name=B.country_name
+)
+SELECT distinct x.country_name as first_country, y.country_name as second_country FROM C x, C y 
+WHERE x.country_name < y.country_name and x.sea = y.sea and x.mountain=y.mountain
+ORDER BY first_country, second_country
+;
+-- Runtime of the query is 0.782 sec

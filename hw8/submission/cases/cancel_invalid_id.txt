@@ -1,0 +1,31 @@
+#
+# user 1
+create user1 user1 10000
+login user1 user1
+search "Kahului HI" "Los Angeles CA" 0 6 7
+book 0
+cancel 2
+quit
+*
+#
+#
+Created user user1
+Logged in as user1
+Itinerary 0: 1 flight(s), 273.0 minutes
+ID: 131239 Date: 2005-7-6 Carrier: DL Number: 292 Origin: Kahului HI Dest: Los Angeles CA Duration: 273.0 Capacity: 14 Price: 689.78
+Itinerary 1: 1 flight(s), 282.0 minutes
+ID: 887205 Date: 2015-7-6 Carrier: HA Number: 56 Origin: Kahului HI Dest: Los Angeles CA Duration: 282.0 Capacity: 0 Price: 645.53
+Itinerary 2: 1 flight(s), 287.0 minutes
+ID: 636257 Date: 2015-7-6 Carrier: AA Number: 254 Origin: Kahului HI Dest: Los Angeles CA Duration: 287.0 Capacity: 17 Price: 994.87
+Itinerary 3: 1 flight(s), 287.0 minutes
+ID: 1016624 Date: 2015-7-6 Carrier: UA Number: 1281 Origin: Kahului HI Dest: Los Angeles CA Duration: 287.0 Capacity: 11 Price: 375.62
+Itinerary 4: 1 flight(s), 294.0 minutes
+ID: 761713 Date: 2015-7-6 Carrier: DL Number: 2116 Origin: Kahului HI Dest: Los Angeles CA Duration: 294.0 Capacity: 13 Price: 967.39
+Itinerary 5: 1 flight(s), 296.0 minutes
+ID: 3087 Date: 2005-7-6 Carrier: AA Number: 254 Origin: Kahului HI Dest: Los Angeles CA Duration: 296.0 Capacity: 1 Price: 857.61
+Itinerary 6: 1 flight(s), 297.0 minutes
+ID: 285 Date: 2005-7-6 Carrier: AA Number: 14 Origin: Kahului HI Dest: Los Angeles CA Duration: 297.0 Capacity: 10 Price: 209.73
+Booked flight(s), reservation ID: 1
+Failed to cancel reservation 2
+Goodbye
+*

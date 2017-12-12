@@ -1,0 +1,9 @@
+select p1, max(y) as z
+	from (select p1, p3, count(*) as y 
+			from (select c.p1 as p1, d.p1 as p3, d.p2 as p4
+					from (select b.p1, b.p2 
+							from person_living a, parent_child b
+							where a.x = b.p1) c, parent_child d
+					where c.p2 = d.p1)
+			group by p1, p3)
+	group by p1

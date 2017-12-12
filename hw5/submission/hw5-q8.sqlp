@@ -1,0 +1,12 @@
+USE hw5;
+WITH k as (
+	SELECT country_code, (SELECT g.y.sea FROM g) as seas 
+	FROM (
+		SELECT s.name as sea, c as country_code FROM world x, x.mondial.sea s UNNEST split(s.`-country`, ' ') c
+	) as T 
+	GROUP BY country_code GROUP AS g(T as y)
+)
+SELECT b.`-car_code` as country_code, b.name as country_name, float(b.`-area`) as area FROM world a, a.mondial.country b LEFT OUTER JOIN k 
+ON b.`-car_code`=k.country_code 
+WHERE array_count(k.seas)=0
+ORDER BY area desc;

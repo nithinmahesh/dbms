@@ -1,0 +1,16 @@
+# user 1
+create user1 user1 100000
+create user2 user2 100000
+login user1 user1
+login user2 user2
+quit
+*
+# undefined
+# expected printouts
+#
+Created user user1
+Created user user2
+Logged in as user1
+User already logged in
+Goodbye
+*

@@ -1,0 +1,8 @@
+USE hw5;
+SELECT u.`#text` as ethnic_group, count(y.name) as num_countries, SUM(float(u.`-percentage`) / 100.0 * float(y.population)) as total_population
+FROM world x, x.mondial.country y,
+CASE  WHEN is_array(y.ethnicgroups) THEN y.ethnicgroups
+                  ELSE [y.ethnicgroups] END u
+WHERE u.`#text` is NOT NULL
+GROUP BY u.`#text` 
+ORDER BY total_population desc;

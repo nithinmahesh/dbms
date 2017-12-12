@@ -1,0 +1,16 @@
+What is serializability? What is a serializable schedule?
+
+Serializability is the property that a (possibly interleaved) execution of a group of transactions has the same effect on the database and produces the same output as some serial execution of the those transactions one after another.
+A serial schedule is one in which all operations of each transaction appear consecutively i.e. it is a serial execution of the group of transactions. A schedule is serializable if and only if there is an equivalent serial schedule. 
+Two schedules are said to be equivalent if:
+1. They contain the same transactions and operations.
+2. They order all conflicting operations of non-aborting transactions in the same way.
+
+What is the "phantom problem"?
+
+Assume that a transaction T1 reads a set of tuples that satisfy a query predicate. A second transaction T2 inserts a new tuple that satisfies the above query predicate. Now if T1 runs the same query again, it will see one extra tuple which it did not see the previous time. 
+This behavior could never occur in a serial schedule as a "phantom" tuple appears in the midst of a transaction and so this execution is anomalous. This is known as the phantom problem. It is an artifact of the transaction model consisting of reads and writes to individual items that dynamically define sets of items based on predicates.
+
+What are some drawbacks of providing the notion of a transaction in a DBMS? We have discussed non relational systems in this class and they don't tend to implement transactions. Why do you think that is the case?
+
+The main drawback of providing the notion of a transaction in DBMS is that transactions reduce the concurrency with which multiple queries can run as they need to provide strong guarantees like atomicity and isolation. If transactions did not exist, there would be much less locking involved that will improve the concurrency with which queries can execute in the system at the expense of correctness. But for big data systems where most of the work is just aggregation, missing a row might be okay as they will make very less impact to the final result.

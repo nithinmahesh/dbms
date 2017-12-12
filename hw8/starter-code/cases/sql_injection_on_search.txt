@@ -1,0 +1,12 @@
+# user 1
+search "Seattle WA" "Portland OR' and actual_time > 50 and dest_city='Portland OR" 1 1 13
+search "Seattle WA' and actual_time > 50 and origin_city='Seattle WA" "Portland OR" 1 1 13
+quit
+*
+# undefined
+# expected printouts for user 1
+#
+No flights match your selection
+No flights match your selection
+Goodbye
+*

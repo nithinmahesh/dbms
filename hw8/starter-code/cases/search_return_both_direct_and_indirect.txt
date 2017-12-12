@@ -1,0 +1,37 @@
+# user 1
+search "Seattle WA" "Portland OR" 0 1 13
+quit
+*
+#
+# expected printouts for user 1
+#
+Itinerary 0: 1 flight(s), 38.0 minutes
+ID: 377316 Date: 2005-7-1 Carrier: OO Number: 6342 Origin: Seattle WA Dest: Portland OR Duration: 38.0 Capacity: 0 Price: 400.18
+Itinerary 1: 1 flight(s), 41.0 minutes
+ID: 377311 Date: 2005-7-1 Carrier: OO Number: 6337 Origin: Seattle WA Dest: Portland OR Duration: 41.0 Capacity: 12 Price: 233.38
+Itinerary 2: 1 flight(s), 41.0 minutes
+ID: 377318 Date: 2005-7-1 Carrier: OO Number: 6344 Origin: Seattle WA Dest: Portland OR Duration: 41.0 Capacity: 16 Price: 559.26
+Itinerary 3: 1 flight(s), 42.0 minutes
+ID: 377320 Date: 2005-7-1 Carrier: OO Number: 6346 Origin: Seattle WA Dest: Portland OR Duration: 42.0 Capacity: 17 Price: 734.52
+Itinerary 4: 1 flight(s), 43.0 minutes
+ID: 377313 Date: 2005-7-1 Carrier: OO Number: 6339 Origin: Seattle WA Dest: Portland OR Duration: 43.0 Capacity: 15 Price: 403.79
+Itinerary 5: 1 flight(s), 46.0 minutes
+ID: 377315 Date: 2005-7-1 Carrier: OO Number: 6341 Origin: Seattle WA Dest: Portland OR Duration: 46.0 Capacity: 10 Price: 993.7
+Itinerary 6: 1 flight(s), 48.0 minutes
+ID: 947538 Date: 2015-7-1 Carrier: OO Number: 4612 Origin: Seattle WA Dest: Portland OR Duration: 48.0 Capacity: 5 Price: 456.72
+Itinerary 7: 1 flight(s), 49.0 minutes
+ID: 951495 Date: 2015-7-1 Carrier: OO Number: 4608 Origin: Seattle WA Dest: Portland OR Duration: 49.0 Capacity: 2 Price: 397.24
+Itinerary 8: 1 flight(s), 50.0 minutes
+ID: 703210 Date: 2015-7-1 Carrier: AS Number: 414 Origin: Seattle WA Dest: Portland OR Duration: 50.0 Capacity: 13 Price: 346.19
+Itinerary 9: 1 flight(s), 53.0 minutes
+ID: 948044 Date: 2015-7-1 Carrier: OO Number: 4623 Origin: Seattle WA Dest: Portland OR Duration: 53.0 Capacity: 3 Price: 758.02
+Itinerary 10: 1 flight(s), 53.0 minutes
+ID: 952899 Date: 2015-7-1 Carrier: OO Number: 4790 Origin: Seattle WA Dest: Portland OR Duration: 53.0 Capacity: 16 Price: 138.88
+Itinerary 11: 2 flight(s), 104.0 minutes
+ID: 541809 Date: 2005-7-1 Carrier: WN Number: 468 Origin: Seattle WA Dest: Spokane WA Duration: 48.0 Capacity: 1 Price: 550.27
+ID: 540005 Date: 2005-7-1 Carrier: WN Number: 2083 Origin: Spokane WA Dest: Portland OR Duration: 56.0 Capacity: 15 Price: 850.0
+Itinerary 12: 2 flight(s), 105.0 minutes
+ID: 69671 Date: 2005-7-1 Carrier: AS Number: 454 Origin: Seattle WA Dest: Spokane WA Duration: 49.0 Capacity: 8 Price: 541.56
+ID: 540005 Date: 2005-7-1 Carrier: WN Number: 2083 Origin: Spokane WA Dest: Portland OR Duration: 56.0 Capacity: 15 Price: 850.0
+Goodbye
+*
